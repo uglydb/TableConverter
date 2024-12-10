@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>TableConverter</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EPPlus" Version="7.5.2" />
+      <PackageReference Include="itext7" Version="9.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="6.0.0-preview.4.21253.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TableConverter.Service\TableConverter.Service.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "PDF to Excel Converter";
+}
+
+<h1>Convert PDF to Excel</h1>
+
+<form asp-action="UploadFile" method="post" enctype="multipart/form-data">
+    <div>
+        <input type="file" name="file" accept=".pdf" required />
+    </div>
+    <div>
+        <button type="submit">Convert</button>
+    </div>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div style="color:red;">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
